@@ -1,11 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { faHouse, faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faCoffee, faEnvelope, faLink } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnsiText } from "react-ansi-animation";
 import me_img from "./me.png";
 import ansi4 from "./ansi/ob-mario.ans";
 import Typist from "react-typist-component";
+import cv from "./cv.txt";
+import contact from "./contact.txt";
 
 function Button({ title, onClick }) {
   const [hover, setHover] = useState(false);
@@ -28,20 +31,16 @@ const RepeatingCharacter = ({ character = "#" }) => {
 
   useEffect(() => {
     const updateRepeatedText = () => {
-      const containerWidth = window.innerWidth; // Use the body's width or the container's
-      console.log(containerWidth);
+      const containerWidth = window.innerWidth;
       const testCanvas = document.createElement("canvas");
       const context = testCanvas.getContext("2d");
-      context.font = "16px TopazPlus-a1200"; // Match the font of your text
+      context.font = "16px TopazPlus-a1200";
       const charWidth = context.measureText(character).width;
-      console.log(charWidth);
       const repeatCount = Math.ceil(containerWidth / charWidth) - 3;
       setRepeatedText(character.repeat(repeatCount));
     };
-
     updateRepeatedText();
     window.addEventListener("resize", updateRepeatedText);
-
     return () => {
       window.removeEventListener("resize", updateRepeatedText);
     };
@@ -131,6 +130,87 @@ function About() {
 function CV({}) {
   const [doneCmd, setDoneCmd] = useState(false);
   const [done, setDone] = useState(false);
+  const [lines, setLines] = useState([]);
+
+  useEffect(() => {
+    fetch(cv)
+      .then((response) => response.text())
+      .then((text) => {
+        const _lines = [];
+        for (let line of text.split("\n")) {
+          if (line === "") {
+            _lines.push(<br/>)
+          } else if (line.includes("GITHUB")) {
+            _lines.push(
+              <pre>  |  <FontAwesomeIcon className="w-5" icon={faGithub} /> GitHub: <a
+                href="https://github.com/dborowiec10"
+                className="text-amber-500"
+              >
+                <b>github.com/dborowiec10</b>
+              </a>                      |</pre>
+            )
+          } else if (line.includes("LINKEDIN")) {
+            _lines.push(
+              <pre>  |  <FontAwesomeIcon className="w-5" icon={faLinkedin} /> LinkedIn: <a
+                href="https://linkedin.com/in/damian-borowiec"
+                className="text-amber-500"
+              >
+                <b>linkedin.com/in/damian-borowiec</b>
+              </a>           |</pre>
+            )
+          } else if (line.includes("EMAIL")) {
+            _lines.push(
+              <pre>  |  <FontAwesomeIcon className="w-5" icon={faEnvelope} /> Email: <a
+                href="mailto:dborowiec10@gmail.com"
+                className="text-amber-500"
+              ><b>dborowiec10@gmail.com</b>
+              </a>                        |</pre>
+            )
+          } else if (line.includes("GOOGLE_SCHOLAR")) {
+            _lines.push(
+              <pre>  + Google Scholar: <a
+                href="https://scholar.google.com/citations?user=gzeDWFIAAAAJ"
+                className="text-amber-500"
+              >
+                <b>scholar.google.com/citations?user=gzeDWFIAAAAJ</b>
+              </a></pre>
+            )
+          } else if (line.includes("3hgroup.co.uk")) {
+            _lines.push(
+              <pre>    |{`>`} 3H Group: <a
+                href="https://3hgroup.co.uk"
+                className="text-amber-500"
+              >
+                <b>3hgroup.co.uk</b>
+              </a></pre>
+            )
+
+          } else if (line.includes("goldenmede.co.uk")) {
+            _lines.push(
+              <pre>    |{`>`} Goldenmede: <a
+                href="https://goldenmede.co.uk"
+                className="text-amber-500"
+              >
+                <b>goldenmede.co.uk</b>
+              </a></pre>
+            )
+          } else if (line.includes("DOWNLOAD_PDF")) {
+            _lines.push(
+              <pre>*                              DAMIAN BOROWIEC                   <a
+                href={process.env.PUBLIC_URL + '/damian_borowiec_cv.pdf'}
+                className="text-amber-500"
+              >
+                <b>DOWNLOAD PDF</b>
+              </a> *</pre>
+            )
+          } else {
+            _lines.push(<pre>{line}</pre>)
+          }
+        }
+        setLines(_lines);
+      });
+  }, []);
+
   return (
     <div className="text-amber-300">
       <Prompt />
@@ -154,7 +234,9 @@ function CV({}) {
           onTypingDone={() => setDone(true)}
         >
           <Typist.Delay ms={1000} />
-          <Typist.Paste>This is a CV</Typist.Paste>
+          <Typist.Paste className="display-linebreak">
+            {lines}
+          </Typist.Paste>
           <br />
         </Typist>
       )}
@@ -178,13 +260,91 @@ function AnsiViewer() {
 }
 
 function Contact() {
+  const [doneCmd, setDoneCmd] = useState(false);
+  const [done, setDone] = useState(false);
+  const [lines, setLines] = useState([]);
+
+  useEffect(() => {
+    fetch(contact)
+      .then((response) => response.text())
+      .then((text) => {
+        const _lines = [];
+        for (let line of text.split("\n")) {
+          if (line === "") {
+            _lines.push(<br/>)
+          } else if (line.includes("GITHUB")) {
+            _lines.push(
+              <pre>  |  <FontAwesomeIcon className="w-5" icon={faGithub} /> GitHub: <a
+                href="https://github.com/dborowiec10"
+                className="text-amber-500"
+              >
+                <b>github.com/dborowiec10</b>
+              </a>                      |</pre>
+            )
+          } else if (line.includes("LINKEDIN")) {
+            _lines.push(
+              <pre>  |  <FontAwesomeIcon className="w-5" icon={faLinkedin} /> LinkedIn: <a
+                href="https://linkedin.com/in/damian-borowiec"
+                className="text-amber-500"
+              >
+                <b>linkedin.com/in/damian-borowiec</b>
+              </a>           |</pre>
+            )
+          } else if (line.includes("EMAIL")) {
+            _lines.push(
+              <pre>  |  <FontAwesomeIcon className="w-5" icon={faEnvelope} /> Email: <a
+                href="mailto:dborowiec10@gmail.com"
+                className="text-amber-500"
+              ><b>dborowiec10@gmail.com</b>
+              </a>                        |</pre>
+            )
+          } else {
+            _lines.push(<pre>{line}</pre>)
+          }
+        }
+        setLines(_lines);
+      });
+  }, []);
+
+
   return (
     <div className="text-amber-300">
-      <p>
-        Contact me at{" "}
-        <a href="mailto:dborowiec10@gmail.com">dborowiec10@gmail.com</a>
-      </p>
+      <Prompt />
+      <span>
+        <Typist
+          typingDelay={100}
+          cursor={<Caret />}
+          hideCursorWhenDone={true}
+          onTypingDone={() => setDoneCmd(true)}
+        >
+          telnet 127.0.0.1
+        </Typist>
+      </span>
+      <br />
+
+      {doneCmd && (
+        <Typist
+          typingDelay={50}
+          cursor={<Caret />}
+          hideCursorWhenDone={true}
+          onTypingDone={() => setDone(true)}
+        >
+          <Typist.Delay ms={1000} />
+          <Typist.Paste className="display-linebreak">
+            {lines}
+          </Typist.Paste>
+          <br />
+        </Typist>
+      )}
+      {done && (
+        <span>
+          <br />
+          <Prompt />
+          <Caret />
+        </span>
+      )}
     </div>
+
   );
 }
 
@@ -194,7 +354,6 @@ function App() {
   const sections = {
     about: <About />,
     cv: <CV />,
-    // research: <About />,
     ansi: <AnsiViewer />,
     contact: <Contact />,
   };
@@ -208,7 +367,6 @@ function App() {
         <RepeatingCharacter character="-" />
         <Button title={"About"} onClick={() => setSection("about")} />
         <Button title={"CV"} onClick={() => setSection("cv")} />
-        {/* <Button title={"Research"} onClick={() => setSection("research")}/> */}
         <Button title={"ANSI ART"} onClick={() => setSection("ansi")} />
         <Button title={"Contact"} onClick={() => setSection("contact")} />
         <RepeatingCharacter character="-" />

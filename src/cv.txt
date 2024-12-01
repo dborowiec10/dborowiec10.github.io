@@ -1,0 +1,159 @@
+*******************************************************************************
+*                              DAMIAN BOROWIEC                   DOWNLOAD_PDF *
+*******************************************************************************
+  +---------------------------------------------------------+
+  |      CONTACT INFORMATION                                |
+  +---------------------------------------------------------+
+  |  Email: EMAIL                                           |
+  |  GitHub: GITHUB                                         |
+  |  LinkedIn: LINKEDIN                                     |
+  +---------------------------------------------------------+
+
+
+*******************************************************************************
+*|  SUMMARY  |*                                                               *
+*******************************************************************************
+  Results-driven Research Software Engineer with a PhD in Deep Learning
+  compiler optimisation, specialising in ML/LLM systems engineering and ML
+  workload orchestration at scale. Adept at leading and executing end-to-end
+  engineering and research projects, including systems design, development,
+  and evaluation.
+
+
+*******************************************************************************
+*|  TECHNICAL SKILLS  |*                                                      *
+*******************************************************************************
+  + Programming Languages:
+      |> Python, Go, Java, C, C++, x86 Assembly
+      |> HTML/CSS, TypeScript
+      |> SQL, LaTeX
+  + ML/LLMs:
+      |> Huggingface (Transformers, PEFT, Accelerate, TGI)
+      |> PyTorch, NumPy, Pandas, Weights & Biases
+      |> TVM, Nvidia (CUDA, CUPTI)
+      |> Vertex AI, OpenAI, Anthropic, LangChain, LangFuse
+  + Systems/Cloud/DBs:
+      |> GCP
+      |> Git, Linux, Linux kernel
+      |> Kubernetes, Docker
+      |> MongoDB, PostgreSQL
+
+
+*******************************************************************************
+*|  PROFESSIONAL EXPERIENCE  |*                                               *
+*******************************************************************************
+  +---------------------------------------------------------+
+  |  SENIOR RESEARCH SOFTWARE ENGINEER - nPlan.io           |
+  |  London, England (Remote)                               |
+  |  Mar 2023 - Present                                     |
+  +---------------------------------------------------------+
+    |> Designed and developed end-to-end, hybrid LLM/graph applications
+    |> Trained, fine-tuned, and adapted OSS LLMs and custom GNN models
+    |> Led adoption of LLMs and LLMOps in the R&D department and product teams
+    |> Facilitated knowledge transfer from R&D into product
+    |> Led evaluation and integration of research prototypes into product
+
+  +---------------------------------------------------------+
+  |  RESEARCH INTERN - HUAWEI R&D                           |
+  |  Edinburgh, Scotland (Remote)                           |
+  |  Jun 2022 - Sep 2022                                    |
+  +---------------------------------------------------------+
+    |> Developed research prototypes
+    |> Focused on Cloud and serverless scheduling and resource management
+    |> Utilised custom containerisation technologies
+
+  +---------------------------------------------------------+
+  |  JUNIOR LECTURER - LANCASTER UNIVERSITY                 |
+  |  Lancaster, England (Hybrid)                            |
+  |  Oct 2019 - Sep 2022                                    |
+  +---------------------------------------------------------+
+    |> Delivered lectures, supervised workshops, marked assignments
+    |> Led 1-on-1s with BSc/MSc students
+    |> Taught:
+        - Machine Learning
+        - Distributed Systems
+        - Operating Systems
+        - Languages, and Compilation
+
+  +---------------------------------------------------------+
+  |  RESEARCH ASSOCIATE - MICROSOFT R&D                     |
+  |  Cambridge, England (Remote)                            |
+  |  Nov 2019 - Apr 2021                                    |
+  +---------------------------------------------------------+
+    |> Performed data coding (QDC), analysis, and modelling
+        - on proprietary qualitative remote meetings data
+    |> Co-authored 2 publications at CHI and CSCW
+
+  +---------------------------------------------------------+
+  |  DATA ANALYTICS ENGINEER - DIGITAL TRANSIT              |
+  |  Lancaster, England                                     |
+  |  Jul 2018 - Oct 2018                                    |
+  +---------------------------------------------------------+
+    |> Designed, developed, and evaluated an analytics platform for
+       identifying railway infrastructure faults using real-time data
+       from on-board train sensors
+    |> Deployed high-performance infrastructure (private GPU cluster and K8S)
+       to host the analytics platform, maintaining reliability, data integrity,
+       and security
+
+  +---------------------------------------------------------+
+  |  JUNIOR ENGINEER - LANCASTER UNIVERSITY                 |
+  |  Lancaster, England                                     |
+  |  Aug 2016 - Feb 2018                                    |
+  +---------------------------------------------------------+
+    |> Designed and developed web applications for Lancaster University Library
+    |> Developed an incident reporting appplication - "Noisy Neighbours"
+    |> Developed geospatial, physical book mapping platform
+
+    Applications continue to be used by over 10,000 students.
+
+
+*******************************************************************************
+*|  EDUCATION  |*                                                             *
+*******************************************************************************
+  +--------------------------------------------+
+  |  PhD COMPUTER SCIENCE                      |
+  |  Lancaster University, England             |
+  |  Oct 2018 - Jul 2023                       |
+  +--------------------------------------------+
+    |> T: "Analysing and Reducing Costs of Deep Learning Compiler Auto-tuning"
+    |> Halved costs of DL compiler auto-tuning
+    |> Deployed and maintained an ML Research GPU cluster for 4.5 years:
+        - 150+ machines
+        - Hardware installation
+        - Hardware upgrades
+        - Kubernetes deployments and maintenance
+        - IAM
+        - Resource allocation
+
+  +--------------------------------------------+
+  |  BSc COMPUTER SCIENCE                      |
+  |  Lancaster University, England             |
+  |  Oct 2015 - Jul 2018                       |
+  +--------------------------------------------+
+    |> 1st Class (Honours) - Avg. 90% across modules.
+    |> Awards:
+        - Best Results Award (British Computer Society)
+        - Outstanding Final Year Project Prize
+        - Chancellor's Medal
+
+
+*******************************************************************************
+*|  RESEARCH  |*                                                              *
+*******************************************************************************
+  + Google Scholar: GOOGLE_SCHOLAR
+  + Publications: 9 papers, 200+ citations, H-index: 5
+  + Conferences / Journals:
+    |> IEEE TPDS, CLOUD
+    |> Springer ICA3PP
+    |> USENIX HotCloud
+    |> ACM CHI, CSCW
+
+
+*******************************************************************************
+*|  OTHER  |*                                                                 *
+*******************************************************************************
+  + Freelance WebDev Projects:
+    |> 3hgroup.co.uk
+    |> goldenmede.co.uk
+  + Languages: English & Polish (Bilingual)

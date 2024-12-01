@@ -301,3 +301,7 @@ body {
     transform: skew(0deg, 0deg);
   }
 }
+
+.display-linebreak {
+  white-space: pre-line;
+}
